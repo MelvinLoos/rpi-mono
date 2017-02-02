@@ -10,7 +10,9 @@ mkdir -p $PREFIX
 chown -R `whoami` $PREFIX
 
 PATH=$PREFIX/bin:$PATH
-git clone https://github.com/mono/mono.git
+wget https://github.com/mono/mono/archive/mono-4.8.0.478.tar.gz
+tar --checkpoint -zxf mono-4.8.0.478.tar.gz
+mv mono* mono
 cd mono
 ./autogen.sh --prefix=$PREFIX
 make
