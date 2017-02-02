@@ -11,9 +11,9 @@ chown -R `whoami` $PREFIX
 
 PATH=$PREFIX/bin:$PATH
 wget https://github.com/mono/mono/archive/mono-4.8.0.478.tar.gz
-tar --checkpoint -zxf mono-4.8.0.478.tar.gz
-mv mono* mono
-cd mono
+tar -zxf mono-4.8.0.478.tar.gz
+rm mono-4.8.0.478.tar.gz
+cd mono-mono-4.8.0.478
 ./autogen.sh --prefix=$PREFIX
 make
 make install
