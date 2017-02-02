@@ -1,6 +1,7 @@
 FROM hypriot/rpi-alpine
 
 RUN apk add --update \
+    alpine-sdk \
     bash \
     git \
     autoconf \

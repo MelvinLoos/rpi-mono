@@ -6,7 +6,7 @@ script:
 # prepare qemu
 - docker run --rm --privileged multiarch/qemu-user-static:register --reset
 # build image
-- docker build -t melvinloos/rpi-mono
+- docker build -t melvinloos/rpi-mono .
 # test image
 - docker run melvinloos/rpi-mono mono --version
 # push image
