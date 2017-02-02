@@ -6,7 +6,7 @@ if [ -z $PREFIX ]; then
 fi
 
 # Ensure you have write permissions to PREFIX
-mkdir $PREFIX
+mkdir -p $PREFIX
 chown -R `whoami` $PREFIX
 
 PATH=$PREFIX/bin:$PATH
