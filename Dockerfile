@@ -2,6 +2,7 @@ FROM hypriot/rpi-alpine
 
 RUN apk add --update \
     alpine-sdk \
+    linux-headers \
     bash \
     tar \
     git \
@@ -11,6 +12,7 @@ RUN apk add --update \
     build-base \
     gettext \
     cmake \
+    libgdiplus-dev \
     && rm -rf /var/cache/apk/*
 
 COPY build.sh /
