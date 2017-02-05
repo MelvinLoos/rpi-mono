@@ -13,7 +13,7 @@ RUN apk add --update \
     build-base \
     gettext \
     cmake \
-#    libgdiplus-dev \ # TODO: fix, only available in testing repo
+    libgdiplus-dev \ 
     && rm -rf /var/cache/apk/*
 
 COPY build.sh /
