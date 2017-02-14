@@ -15,5 +15,7 @@ tar -zxvf mono-4.8.0.478.tar.gz
 rm mono-4.8.0.478.tar.gz
 cd mono-mono-4.8.0.478
 ./autogen.sh --prefix=$PREFIX
-make
-make install
+echo "Starting make..."
+make 2>&1 >/dev/null
+echo "Starting make install..."
+make install 2>&1 >/dev/null
